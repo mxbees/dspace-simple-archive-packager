@@ -124,7 +124,7 @@ do
     echo $id.$suffix > $object_path/record.$id/contents
     ys_license > $object_path/record.$id/license.txt
     echo -e "license.txt\tbundle:LICENSE" >> $object_path/record.$id/contents
-    etd_license > $object_path/record.$id/YorkU_ETDlicense.txt
+    etd_license >  $object_path/record.$id/YorkU_ETDlicense.txt
     echo -e "YorkU_ETDlicense.txt\tbundle:LICENSE" >> $object_path/record.$id/contents
 done 
 }
