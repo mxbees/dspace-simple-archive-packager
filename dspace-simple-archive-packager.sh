@@ -125,7 +125,10 @@ for header in "${all_headers[@]}"; do
     #this writes the tag. The 'printf '%b\n'' is what 
     #allows us to restore the newlines in the xml 
     #(since csv doesn't handle them gracefully.
+    if [ ${#esc_field} -gt '0' ]
+    then
     printf '%b\n' "<dcvalue element=\"$element\" qualifier=\"$qualifier\">$esc_field</dcvalue>" >> $object_path/record.$dc_identifier/dublin_core.xml
+    fi
     c1=$((c1+1))
 done
 #calls the footer to close the xml record.
